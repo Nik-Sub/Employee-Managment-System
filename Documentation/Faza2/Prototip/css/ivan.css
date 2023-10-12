@@ -1,0 +1,364 @@
+  /* Created by Ivan Sobic */
+  .employees{
+    margin-top: 30px;
+  }
+
+  .page{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .all-profiles{
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center;
+    justify-content: center; */
+  }
+
+  .meetings-page{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .all-profiles .profile{
+    width: 300px;
+    height: auto;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    border-color: #1c212d;
+    border-width: 2px;
+    border-radius: 20px;
+    /* border-style: solid; */
+    padding: 20px;
+    box-shadow: 0px 3px 6px #ada8a8;
+    background-color: #eee;
+    position: relative;
+  }
+
+  .profile{
+    width: 300px;
+    height: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    border-color: #1c212d;
+    border-width: 2px;
+    border-radius: 20px;
+    /* border-style: solid; */
+    padding: 20px;
+    box-shadow: 0px 3px 6px #ada8a8;
+    background-color: #eee;
+    position: relative;
+  }
+
+  .profile::before{
+    content: "";
+    background-color: #1c212d;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    border-radius: 20px 20px 0px 0px;
+    position: absolute;
+  }
+
+  /* .employee-data{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  } */
+
+  .text-data{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .text-data span{
+    padding: 8px;
+    font-size: large;
+    align-self: center;
+    /* font-weight: 550; */
+    color: #333333;
+  }
+
+  .user-picture{
+    display: flex;
+    height: 150px;
+    width: 150px;
+    background-color: #eee;
+    padding: 4px;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #1c212d;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    position: relative;
+  }
+
+  .data-property{
+    display: flex;
+    font-size: larger;
+    color: #333333;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .data{
+    display: flex;
+    font-size: larger;
+    /* font-weight: bold; */
+    color: #333333;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .meetings{
+    display: flex;
+    flex-flow: wrap;
+  }
+
+  .meeting-div{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    /* border-style: solid; */
+    /* border-width: 2px; */
+    border-radius: 15px; 
+    /* border-color: #eee; */
+    color: #eee; 
+    background-color: #1c212d;
+    padding: 10px;
+    margin: 20px;
+    position: relative;
+  }
+
+  .meeting-title{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: larger;
+    font-weight: 550;
+    align-self: center;
+    position: relative;
+  }
+
+  .meeting-date, .meeting-time, .meeting-organizer{
+    font-size: large;
+    margin-top: 10px;
+  }
+
+  .meeting-missed{
+    font-size: large;
+    color: #FF4742;
+    margin-top: 10px;
+  }
+
+  .meeting-attended{
+    font-size: large;
+    color: #07af31;
+    margin-top: 10px;
+  }
+
+  .buttons{
+    display: flex;
+    width: auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .view-button{
+    height: 50px;
+    width: 70px;
+    /* width: 100%; */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 4px;
+
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: rgb(130, 106, 251);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration: none;
+  }
+  
+  .view-button:hover{
+    background: rgb(88, 56, 250);
+  }
+
+  .delete-button{
+    height: 50px;
+    width: 70px;
+
+    /* width: 100%; */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 4px;
+
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #FF4742;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration: none;
+  }
+
+  .delete-button:hover {
+    background: #e8322b;
+  }
+
+  .update-button{
+    height: 50px;
+    width: 100px;
+
+    /* width: 100%; */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 4px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: rgb(130, 106, 251);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+  .update-button:hover{
+    background: rgb(88, 56, 250);
+  }
+
+  .update-employee{
+    height: 50px;
+    width: auto;
+    min-width: 100px;
+
+    /* width: 50%; */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    margin: 4px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: rgb(130, 106, 251);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+  .update-employee:hover{
+    background: rgb(88, 56, 250);
+  }
+
+  .back-button{
+    height: 50px;
+    width: auto;
+    min-width: 100px;
+    /* width: 50%; */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    margin: 4px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #FF4742;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+  .back-button:hover{
+    background: #FF4742;
+  }
+
+  .meetings-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .update-meeting{
+    height: 50px;
+    width: 100px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 8px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: rgb(130, 106, 251);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration: none;
+  }
+  
+  .update-meeting:hover{
+    background: rgb(88, 56, 250);
+  }
+
+  .delete-meeting{
+    height: 50px;
+    width: 100px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 8px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #FF4742;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration: none;
+  }
+
+  .delete-meeting:hover {
+    background: #e8322b;
+  }

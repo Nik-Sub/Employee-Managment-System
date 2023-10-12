@@ -1,0 +1,138 @@
+<!--Created by Uros Kozic-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bxl-c-plus-plus icon'></i>
+            <div class="logo_name">EMS</div>
+            <i class='bx bx-menu' id="btn" ></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+            <a href="profile.html">
+                <i class='bx bx-user' ></i>
+                <span class="links_name">Profile</span>
+            </a>
+            <span class="tooltip">Profile</span>
+            </li>
+            <li>
+            <a href="employeesOverview.html">
+                <i class='bx bxs-user-detail'></i>
+                <span class="links_name">Employees</span>
+            </a>
+            <span class="tooltip">Employees</span>
+            </li>
+            <li>
+            <a href="meetings.html">
+                <i class='bx bxs-objects-vertical-bottom'></i>
+                <span class="links_name">Meetings</span>
+            </a>
+            <span class="tooltip">Meetings</span>
+            </li>
+            <li>
+                <a href="roles.html">
+                    <i class='bx bx-cog'></i>
+                    <span class="links_name">Roles</span>
+                </a>
+                <span class="tooltip">Roles</span>
+            </li>
+            <li class="profile-side">
+                <div class="profile-details">
+                <div class="name_job">
+                    <div class="name">Uros Kozic</div>
+                    <div class="job">Senior Software Engineer</div>
+                </div>
+                </div>
+                <i class='bx bx-log-out' id="log_out" ></i>
+            </li>
+        </ul>
+        </div>
+        <section class="container">
+            <h1>All Roles</h1>
+            <a class="button-create" href="createRole.html">Add new role</a>
+            <div class="role-card">
+                <div class="role-header">
+                    Role Id: 12345bacbd
+                </div>
+                <div class="role-body">
+                    <h3 class="role-title">Admin</h5>
+                </div>
+            </div>
+            <div class="role-card">
+                <div class="role-header">
+                    Role Id: 3456bacbd
+                </div>
+                <div class="role-body">
+                    <h3 class="role-title">Manager</h5>
+                </div>
+            </div>
+            <div class="role-card">
+                <div class="role-header">
+                    Role Id: 7896bacbd
+                </div>
+                <div class="role-body">
+                    <h3 class="role-title">User</h5>
+                </div>
+            </div>
+        </section>
+    
+        <script>
+            let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let timeFrom = document.querySelector("#timeFrom");
+  let timeTo = document.querySelector("#timeTo");
+
+  let logOutBtn = document.querySelector("#log_out");
+  
+  logOutBtn.addEventListener("click", ()=>{
+    window.location.href = 'login.html';
+  });
+
+  const validate = dateString => {
+    const day = (new Date(dateString)).getDay();
+    if (day==0 || day==6) {
+      return false;
+    }
+    return true;
+  }
+  
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();
+  });
+
+
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
+   }
+  }
+  function openInput(){
+    let p = document.getElementById("inputParticipant");
+    p.style.display = "block";
+  }
+  function closeInput(){
+    let p = document.getElementById("inputParticipant");
+    p.style.display = "none";
+  }
+  
+  function removeParticipant(){
+    event.srcElement.parentElement.style.display = "none";
+    //todo izbaci iz liste kad se bude implementiralo
+  }
+
+</script>
+</body>
+</html>

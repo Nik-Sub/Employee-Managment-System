@@ -1,0 +1,99 @@
+/* Created by Nikola Subaric */
+
+.profilePicDiv{
+  display:flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 200px;
+  max-width: 200px;
+  /*left: 44%;*/
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #1c212d;
+}
+
+#photo{
+margin-left: auto;
+margin-right: auto;
+max-height: 200px;
+max-width: 200px;
+}
+
+#picForAcc{
+display: none;
+}
+
+#uploadBtn{
+height: 40px;
+width:100%;
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+text-align: center;
+bottom: 0;
+background: rgba(0,0,0,0.7);
+color: wheat;
+line-height: 30px;
+display: none;
+}
+
+#navlist{
+padding:0;
+}
+
+
+#aroundPic{
+padding: 0;
+}
+
+#main{
+margin:0 !important;
+max-width: 100% !important;
+padding: 0;
+background-color: #eee;
+}
+
+#right{
+margin: 0;
+padding: 0;
+}
+
+
+.titleAcc{
+background-color: #1c212d;
+color: white;
+margin: 0;
+}
+#divTitle{
+background-color: #1c212d;
+margin-bottom: 1%;
+margin-right: 0 !important;
+margin-left: 0 !important;
+}
+
+
+.padding0{
+padding: 0 !important;
+}
+
+#idForma{
+margin: 0;
+}
+
+.buttons{
+margin-bottom: 1%;
+padding: 0;
+}
+.paddingRight0{
+padding-right: 0;
+}
+
+.row{
+margin-right: 0 !important;
+margin-left: 0 !important;
+}
+
+.paddingLeft0{
+padding-left: 0;
+}

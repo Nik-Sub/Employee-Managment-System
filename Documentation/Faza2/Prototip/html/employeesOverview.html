@@ -1,0 +1,161 @@
+<!--Created by Ivan Sobic-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/ivan.css">
+
+
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+        <i class='bx bxl-c-plus-plus icon'></i>
+        <div class="logo_name">EMS</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+        <li>
+        <a href="profile.html">
+            <i class='bx bx-user' ></i>
+            <span class="links_name">Profile</span>
+        </a>
+        <span class="tooltip">Profile</span>
+        </li>
+        <li>
+        <a href="employeesOverview.html">
+            <i class='bx bxs-user-detail'></i>
+            <span class="links_name">Employees</span>
+        </a>
+        <span class="tooltip">Employees</span>
+        </li>
+        <li>
+        <a href="meetings.html">
+            <i class='bx bxs-objects-vertical-bottom'></i>
+            <span class="links_name">Meetings</span>
+        </a>
+        <span class="tooltip">Meetings</span>
+        </li>
+        <li>
+            <a href="roles.html">
+                <i class='bx bx-cog'></i>
+                <span class="links_name">Roles</span>
+            </a>
+            <span class="tooltip">Roles</span>
+        </li>
+        <li class="profile-side">
+            <div class="profile-details">
+            <div class="name_job">
+                <div class="name">Uros Kozic</div>
+                <div class="job">Senior Software Engineer</div>
+            </div>
+            </div>
+            <i class='bx bx-log-out' id="log_out" ></i>
+        </li>
+    </ul>
+    </div>
+  <section class="container">
+    <h1>All Employees</h1>
+    <a class="button-create" href="createAccount.html">Add new account</a>
+    <div class="all-profiles">
+      <div class="profile">
+        <div>
+          <img class="user-picture" src="../img/user.png">
+        </div>
+        <div class="employee-data">
+          <div class="text-data">
+            <span class="name">Ivan Sobic</span>
+            <span class="username">sobic@gmail.com</span>
+          </div>
+          <div class="buttons">
+            <a class="view-button" href="employee.html">View</a>
+            <a class="view-button" href="updateAccount.html">Update</a>
+            <a class="delete-button" href="#" onclick="hideEmployee()">Delete</a>
+          </div>
+        </div>
+      </div>
+      <div class="profile">
+        <div>
+          <img class="user-picture" src="../img/user.png">
+        </div>
+        <div class="employee-data">
+          <div class="text-data">
+            <span class="name">Ivan Sobic</span>
+            <span class="username">sobic@gmail.com</span>
+          </div>
+          <div class="buttons">
+            <a class="view-button" href="employee.html">View</a>
+            <a class="view-button" href="updateAccount.html">Update</a>
+            <a class="delete-button" href="#" onclick="hideEmployee()">Delete</a>
+          </div>
+        </div>
+      </div>
+      <div class="profile">
+        <div>
+          <img class="user-picture" src="../img/user.png">
+        </div>
+        <div class="employee-data">
+          <div class="text-data">
+            <span class="name">Ivan Sobic</span>
+            <span class="username">sobic@gmail.com</span>
+          </div>
+          <div class="buttons">
+            <a class="view-button" href="employee.html">View</a>
+            <a class="view-button" href="updateAccount.html">Update</a>
+            <a class="delete-button" href="#" onclick="hideEmployee()">Delete</a>
+          </div>
+        </div>
+      </div>
+      <div class="profile">
+        <div>
+          <img class="user-picture" src="../img/user.png">
+        </div>
+        <div class="employee-data">
+          <div class="text-data">
+            <span class="name">Ivan Sobic</span>
+            <span class="username">sobic@gmail.com</span>
+          </div>
+          <div class="buttons">
+            <a class="view-button" href="employee.html">View</a>
+            <a class="view-button" href="updateAccount.html">Update</a>
+            <a class="delete-button" href="#" onclick="hideEmployee()">Delete</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+
+  let logOutBtn = document.querySelector("#log_out");
+  
+  logOutBtn.addEventListener("click", ()=>{
+    window.location.href = 'login.html';
+  });
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();
+  });
+
+  function hideEmployee(){
+    event.srcElement.parentNode.parentNode.parentNode.remove();
+  }
+
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
+   }
+  }
+  </script>
+</body>
+</html>

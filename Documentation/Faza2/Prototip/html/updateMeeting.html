@@ -1,0 +1,368 @@
+<!--Created by Boris Martinovic-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+        <i class='bx bxl-c-plus-plus icon'></i>
+        <div class="logo_name">EMS</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+        <li>
+        <a href="profile.html">
+            <i class='bx bx-user' ></i>
+            <span class="links_name">Profile</span>
+        </a>
+        <span class="tooltip">Profile</span>
+        </li>
+        <li>
+        <a href="employeesOverview.html">
+            <i class='bx bxs-user-detail'></i>
+            <span class="links_name">Employees</span>
+        </a>
+        <span class="tooltip">Employees</span>
+        </li>
+        <li>
+        <a href="meetings.html">
+            <i class='bx bxs-objects-vertical-bottom'></i>
+            <span class="links_name">Meetings</span>
+        </a>
+        <span class="tooltip">Meetings</span>
+        </li>
+        <li>
+            <a href="roles.html">
+                <i class='bx bx-cog'></i>
+                <span class="links_name">Roles</span>
+            </a>
+            <span class="tooltip">Roles</span>
+        </li>
+        <li class="profile-side">
+            <div class="profile-details">
+            <div class="name_job">
+                <div class="name">Uros Kozic</div>
+                <div class="job">Senior Software Engineer</div>
+            </div>
+            </div>
+            <i class='bx bx-log-out' id="log_out" ></i>
+        </li>
+    </ul>
+    </div>
+  <section class="container">
+    <h1>Update Meeting</h1>
+    <form action="meetings.html" method="get" class="form">
+      <div class="input-box">
+        <label>Title</label>
+        <input value="Meeting2" type="text" placeholder="Enter Title" required />
+      </div>
+      <div class="input-box">
+        <label>Date</label>
+        <input value="2023-03-16" name="meetdate" id="meetDate" type="date" placeholder="Enter date" required />
+      </div>
+      <div class="column">
+        <div class="input-box">
+          <label>Time From</label>
+          <div class="select-box">
+            <select id="timeFrom" onchange="checkTime()">
+              <option hidden>From</option>
+              <option>8:00</option>
+              <option>08:15</option>
+              <option>08:30</option>
+              <option>08:45</option>
+              <option>09:00</option>
+              <option>09:15</option>
+              <option>09:30</option>
+              <option>09:45</option>
+              <option>10:00</option>
+              <option>10:15</option>
+              <option>10:30</option>
+              <option>10:45</option>
+              <option>11:00</option>
+              <option>11:15</option>
+              <option>11:30</option>
+              <option>11:45</option>
+              <option>12:00</option>
+              <option>12:15</option>
+              <option>12:30</option>
+              <option>12:45</option>
+              <option>13:00</option>
+              <option>13:15</option>
+              <option>13:30</option>
+              <option>13:45</option>
+              <option>14:00</option>
+              <option>14:15</option>
+              <option>14:30</option>
+              <option>14:45</option>
+              <option>15:00</option>
+              <option>15:15</option>
+              <option>15:30</option>
+              <option>15:45</option>
+            </select>
+          </div>
+        </div>
+        <div class="input-box">
+          <label>Time To</label>
+          <div class="select-box">
+            <select id="timeTo" onchange="checkTime()">
+              <option hidden>To</option>
+              <option>08:00</option>
+              <option>08:15</option>
+              <option>08:30</option>
+              <option>08:45</option>
+              <option>09:00</option>
+              <option>09:15</option>
+              <option>09:30</option>
+              <option>09:45</option>
+              <option>10:00</option>
+              <option>10:15</option>
+              <option>10:30</option>
+              <option>10:45</option>
+              <option>11:00</option>
+              <option>11:15</option>
+              <option>11:30</option>
+              <option>11:45</option>
+              <option>12:00</option>
+              <option>12:15</option>
+              <option>12:30</option>
+              <option>12:45</option>
+              <option>13:00</option>
+              <option>13:15</option>
+              <option>13:30</option>
+              <option>13:45</option>
+              <option>14:00</option>
+              <option>14:15</option>
+              <option>14:30</option>
+              <option>14:45</option>
+              <option>15:00</option>
+              <option>15:15</option>
+              <option>15:30</option>
+              <option>15:45</option>
+              <option>16:00</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="input-box">
+        <label>Participants</label>
+        <div class="participant-icon">
+          <img src="../img/user.png">
+          <div>
+            <span class="participant-name">&nbsp Nikola Subaric</span>
+            <br>
+            <span class="participant-email">&nbsp subaric@gmail.com</span>
+          </div>
+        </div>
+        <div class="participant-icon">
+          <img src="../img/user.png">
+          <div>
+            <span class="participant-name">&nbsp Ivan Sobic</span>
+            <br>
+            <span class="participant-email">&nbsp sobic@gmail.com</span>
+          </div>
+          <a class="remove-button" onclick="removeParticipant()">Remove</a>
+        </div>
+        <div class="participant-icon last">
+          <img src="../img/user.png">
+          <div>
+            <span class="participant-name">&nbsp Boris Martinovic</span>
+            <br>
+            <span class="participant-email">&nbsp boris@gmail.com</span>
+          </div>
+          <a class="remove-button" onclick="removeParticipant()">Remove</a>
+        </div>
+        <br>
+        <a id="addParticipant" onclick="openInput()">
+          <i class='bx bx-plus-circle'></i>
+          <span class="participant-email">&nbsp Add Participant</span>
+        </a>
+        <div class="input-box" id="inputParticipant" style="display: none;">
+          <div class="column">
+            <input type="text" placeholder="Enter Email" id="emailField"/>
+            <a class="add-button" onclick="addToList()">Add</a>
+            <a class="cancel-button2" onclick="closeInput()">Cancel</a>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <a class="cancel-button" href="meetings.html">Cancel</a>
+        <button class="create-button">Update</button>
+      </div>
+    </form>
+  </section>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+
+  let logOutBtn = document.querySelector("#log_out");
+  
+  logOutBtn.addEventListener("click", ()=>{
+    window.location.href = 'login.html';
+  });
+
+  const validate = dateString => {
+    const day = (new Date(dateString)).getDay();
+    if (day==0 || day==6) {
+      return false;
+    }
+    return true;
+  }
+
+  document.querySelector("#meetDate").onchange = evt => {
+    if (!validate(evt.target.value)) {
+     evt.target.value = '';
+    }
+  }
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();
+  });
+  
+  var result = new Date();
+  result.setDate(result.getDate() + 1);
+  var tommorow = result.toISOString().split('T')[0];
+  document.getElementsByName("meetdate")[0].setAttribute('min', tommorow);
+
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
+   }
+  }
+  function openInput(){
+    let p = document.getElementById("inputParticipant");
+    p.style.display = "block";
+  }
+  function closeInput(){
+    let p = document.getElementById("inputParticipant");
+    p.style.display = "none";
+  }
+  function addToList(){
+
+var email = document.getElementById("emailField").value;
+if(email === ""){
+  return;
+}
+var pi = document.createElement("div");
+pi.classList.add("participant-icon");
+
+var im = document.createElement("img");
+im.setAttribute("src", "../img/user.png");
+
+var dv = document.createElement("div");
+var b = document.createElement("br");
+
+var pn = document.createElement("span");
+pn.classList.add("participant-name");
+pn.innerHTML = "&nbsp John Doe";
+
+var pe = document.createElement("span");
+pe.classList.add("participant-email");
+pe.innerHTML = "&nbsp " + email;
+
+var an = document.createElement("a");
+an.classList.add("remove-button");
+an.innerHTML = "Remove";
+an.addEventListener("click", ()=>{
+  if(event.srcElement.parentElement.classList.contains("last")){
+    let elements = document.getElementsByClassName("participant-icon");
+    elements[elements.length - 2].classList.add("last");
+  }
+  event.srcElement.parentNode.remove();
+});
+
+dv.appendChild(pn);
+dv.appendChild(b);
+dv.appendChild(pe);
+
+pi.appendChild(im);
+pi.appendChild(dv);
+pi.appendChild(an);
+
+var lastNode = document.getElementsByClassName("last")[0];
+lastNode.classList.remove("last");
+pi.classList.add("last");
+lastNode.parentNode.insertBefore(pi, lastNode.nextSibling);
+closeInput();
+}
+
+  function removeParticipant(){
+    if(event.srcElement.parentElement.classList.contains("last")){
+      let elements = document.getElementsByClassName("participant-icon");
+      elements[elements.length - 2].classList.add("last");
+    }
+    event.srcElement.parentNode.remove();
+  }
+
+  function checkTime(){
+    let timeFrom = document.getElementById("timeFrom");
+    let timeTo = document.getElementById("timeTo");
+    var indexFrom = timeFrom.options[timeFrom.selectedIndex].index;
+    var indexTo = timeTo.options[timeTo.selectedIndex].index;
+    
+    if(indexTo === 0){
+      var op = timeTo.getElementsByTagName("option");
+      for (var i = 1; i < op.length; i++) {
+        if(i <= indexFrom){
+          op[i].disabled = true;
+          op[i].hidden = true;
+        }
+        else{
+          op[i].disabled = false;
+          op[i].hidden = false;
+        }
+      }
+    }
+    else if(indexFrom === 0){
+      var op = timeFrom.getElementsByTagName("option");
+      for (var i = 1; i < op.length; i++) {
+        if(i < indexTo){
+          op[i].disabled = false;
+          op[i].hidden = false;
+        }
+        else{
+          op[i].disabled = true;
+          op[i].hidden = true;
+        }
+      }
+    }
+    else if(event.srcElement === timeFrom){
+      var op = timeTo.getElementsByTagName("option");
+      for (var i = 1; i < op.length; i++) {
+        if(i <= indexFrom){
+          op[i].disabled = true;
+          op[i].hidden = true;
+        }
+        else{
+          op[i].disabled = false;
+          op[i].hidden = false;
+        }
+      }
+    }
+    else{
+      var op = timeFrom.getElementsByTagName("option");
+      for (var i = 1; i < op.length; i++) {
+        if(i < indexTo){
+          op[i].disabled = false;
+          op[i].hidden = false;
+        }
+        else{
+          op[i].disabled = true;
+          op[i].hidden = true;
+        }
+      }
+    }
+  }
+  </script>
+</body>
+</html>

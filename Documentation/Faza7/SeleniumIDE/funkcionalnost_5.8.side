@@ -1,0 +1,404 @@
+{
+  "id": "03c29512-2ba6-415b-b0cc-365ecdb1aa3f",
+  "version": "2.0",
+  "name": "funkcionalnost_5.8",
+  "url": "http://127.0.0.1:8000",
+  "tests": [{
+    "id": "047c560f-e2ce-42fe-aaf7-f5bcb0894528",
+    "name": "Korisnik odustaje od azuriranja prisustva na sastanku",
+    "commands": [{
+      "id": "005280af-113d-4069-9464-709bbaefaec3",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "86c7085d-58af-4a1d-8363-1162f7b59c43",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1048",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed67960f-4d20-4156-8e86-72b13b6ef1dc",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.email input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c3cf17d0-25d7-4a01-9cf8-be2b0a44c488",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.email input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "ivan@gmail.com"
+    }, {
+      "id": "a2895990-3a75-4a84-bd94-11b0197d9d62",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.password input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "63d8bf4e-a137-416b-8ef4-4cf8504eb8a8",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.password input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "ivan123"
+    }, {
+      "id": "8a22f7a6-797a-4fcf-8826-70d6660109b4",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(4)",
+      "targets": [
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@value='Login']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d13d3793-c45b-457d-be04-3fe19b1acff6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bxs-objects-vertical-bottom",
+      "targets": [
+        ["css=.bxs-objects-vertical-bottom", "css:finder"],
+        ["xpath=//li[3]/a/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4dbd004-f798-485d-80c2-5309702ad470",
+      "comment": "",
+      "command": "click",
+      "target": "id=held-tab",
+      "targets": [
+        ["id=held-tab", "id"],
+        ["css=#held-tab", "css:finder"],
+        ["xpath=//button[@id='held-tab']", "xpath:attributes"],
+        ["xpath=//ul[@id='myTab']/li[2]/button", "xpath:idRelative"],
+        ["xpath=//li[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Held')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b5f7293-9214-427b-b0f1-517bc2173745",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Update Attendance",
+      "targets": [
+        ["linkText=Update Attendance", "linkText"],
+        ["css=.button-create:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Update Attendance')]", "xpath:link"],
+        ["xpath=//div[@id='held-tab-pane']/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://127.0.0.1:8000/updateAttendance/1']", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Update Attendance')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "de7cf379-0954-4d42-a81f-f03ff90486e9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cancel",
+      "targets": [
+        ["linkText=Cancel", "linkText"],
+        ["css=.cancel-button", "css:finder"],
+        ["xpath=//a[contains(text(),'Cancel')]", "xpath:link"],
+        ["xpath=(//a[@href='http://127.0.0.1:8000/allMeetings'])[2]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Cancel')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "95d5a2c0-86e6-4dff-806c-a5ad6213fb0a",
+      "comment": "",
+      "command": "click",
+      "target": "id=held-tab",
+      "targets": [
+        ["id=held-tab", "id"],
+        ["css=#held-tab", "css:finder"],
+        ["xpath=//button[@id='held-tab']", "xpath:attributes"],
+        ["xpath=//ul[@id='myTab']/li[2]/button", "xpath:idRelative"],
+        ["xpath=//li[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Held')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bfcfb10d-f142-4e99-95cb-8cce6c1977fe",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.meeting-missed",
+      "targets": [
+        ["css=.meeting-missed", "css:finder"],
+        ["xpath=//div[@id='held-tab-pane']/div/div/span[8]", "xpath:idRelative"],
+        ["xpath=//span[8]", "xpath:position"],
+        ["xpath=//span[contains(.,'Missed')]", "xpath:innerText"]
+      ],
+      "value": "Missed"
+    }, {
+      "id": "01e4db8e-75a9-4d7c-a181-1b6750119569",
+      "comment": "",
+      "command": "click",
+      "target": "id=log_out",
+      "targets": [
+        ["id=log_out", "id"],
+        ["css=#log_out", "css:finder"],
+        ["xpath=//i[@id='log_out']", "xpath:attributes"],
+        ["xpath=//li[4]/a/i", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "56b9a795-4499-484a-b375-a1a926bb72da",
+    "name": "Korisnik uspesno azurira prisustvo na sastanku",
+    "commands": [{
+      "id": "fa90e72a-d7bd-4f50-98f6-e51846ce1d5c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7df977d6-2e3c-4073-a744-b6c04bdbc2c3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1048",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "64156212-fe7f-4b68-90c1-c56e26f13880",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.email input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1872693-3380-4a2f-93bc-ba3f7b7e8d7a",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.email input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "ivan@gmail.com"
+    }, {
+      "id": "64324874-83f1-4bfc-8b4c-09e7b6512beb",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.password input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a50a0f9e-95db-42fd-ad8e-932ef74c2c43",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.password input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "ivan123"
+    }, {
+      "id": "d720e5d5-d5a7-4eee-8156-191426ab44c3",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(4)",
+      "targets": [
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@value='Login']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "febcb8e0-357a-4e2a-b85b-16104041b3ab",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bxs-objects-vertical-bottom",
+      "targets": [
+        ["css=.bxs-objects-vertical-bottom", "css:finder"],
+        ["xpath=//li[3]/a/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e30c528-8008-488b-9f42-90747213cb70",
+      "comment": "",
+      "command": "click",
+      "target": "id=held-tab",
+      "targets": [
+        ["id=held-tab", "id"],
+        ["css=#held-tab", "css:finder"],
+        ["xpath=//button[@id='held-tab']", "xpath:attributes"],
+        ["xpath=//ul[@id='myTab']/li[2]/button", "xpath:idRelative"],
+        ["xpath=//li[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Held')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d97bfd2d-74de-41f9-a5e2-8bb0e1118b2f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Update Attendance",
+      "targets": [
+        ["linkText=Update Attendance", "linkText"],
+        ["css=.button-create:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Update Attendance')]", "xpath:link"],
+        ["xpath=//div[@id='held-tab-pane']/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://127.0.0.1:8000/updateAttendance/1']", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Update Attendance')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5fad117d-1dd8-4a21-a7ab-fa79bc2d49a3",
+      "comment": "",
+      "command": "click",
+      "target": "name=e2",
+      "targets": [
+        ["name=e2", "name"],
+        ["css=.participant-icon:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='e2']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8268916c-52ea-494f-b62e-c0a42e8c0b70",
+      "comment": "",
+      "command": "click",
+      "target": "css=.create-button",
+      "targets": [
+        ["css=.create-button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Update')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "957e7a9b-d570-4d48-a9dd-2a2473274340",
+      "comment": "",
+      "command": "click",
+      "target": "id=held-tab",
+      "targets": [
+        ["id=held-tab", "id"],
+        ["css=#held-tab", "css:finder"],
+        ["xpath=//button[@id='held-tab']", "xpath:attributes"],
+        ["xpath=//ul[@id='myTab']/li[2]/button", "xpath:idRelative"],
+        ["xpath=//li[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Held')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "368f5155-30d1-4182-947d-60dd93ff877c",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.meeting-attended",
+      "targets": [
+        ["css=.meeting-attended", "css:finder"],
+        ["xpath=//div[@id='held-tab-pane']/div/div/span[8]", "xpath:idRelative"],
+        ["xpath=//span[8]", "xpath:position"],
+        ["xpath=//span[contains(.,'Attended')]", "xpath:innerText"]
+      ],
+      "value": "Attended"
+    }, {
+      "id": "5b4fc8b8-cd2c-417f-9a03-67167bbd1543",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Update Attendance",
+      "targets": [
+        ["linkText=Update Attendance", "linkText"],
+        ["css=.button-create:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Update Attendance')]", "xpath:link"],
+        ["xpath=//div[@id='held-tab-pane']/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://127.0.0.1:8000/updateAttendance/1']", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Update Attendance')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ea27bef-be1a-4823-b3c9-a768b8cb086a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.create-button",
+      "targets": [
+        ["css=.create-button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Update')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4de3093f-cd90-4cd1-b4aa-1f31eebf706e",
+      "comment": "",
+      "command": "click",
+      "target": "id=held-tab",
+      "targets": [
+        ["id=held-tab", "id"],
+        ["css=#held-tab", "css:finder"],
+        ["xpath=//button[@id='held-tab']", "xpath:attributes"],
+        ["xpath=//ul[@id='myTab']/li[2]/button", "xpath:idRelative"],
+        ["xpath=//li[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Held')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9afd353d-63b5-4220-ae5a-594ad0c5ee40",
+      "comment": "",
+      "command": "click",
+      "target": "id=log_out",
+      "targets": [
+        ["id=log_out", "id"],
+        ["css=#log_out", "css:finder"],
+        ["xpath=//i[@id='log_out']", "xpath:attributes"],
+        ["xpath=//li[4]/a/i", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "9f70658a-297e-4768-a02a-43ee282634c5",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["047c560f-e2ce-42fe-aaf7-f5bcb0894528"]
+  }],
+  "urls": ["http://127.0.0.1:8000/"],
+  "plugins": []
+}

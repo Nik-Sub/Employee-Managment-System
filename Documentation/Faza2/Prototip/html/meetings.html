@@ -1,0 +1,218 @@
+<!--Created by Ivan Sobic-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/ivan.css">
+
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+        <i class='bx bxl-c-plus-plus icon'></i>
+        <div class="logo_name">EMS</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+        <li>
+        <a href="profile.html">
+            <i class='bx bx-user' ></i>
+            <span class="links_name">Profile</span>
+        </a>
+        <span class="tooltip">Profile</span>
+        </li>
+        <li>
+        <a href="employeesOverview.html">
+            <i class='bx bxs-user-detail'></i>
+            <span class="links_name">Employees</span>
+        </a>
+        <span class="tooltip">Employees</span>
+        </li>
+        <li>
+        <a href="meetings.html">
+            <i class='bx bxs-objects-vertical-bottom'></i>
+            <span class="links_name">Meetings</span>
+        </a>
+        <span class="tooltip">Meetings</span>
+        </li>
+        <li>
+            <a href="roles.html">
+                <i class='bx bx-cog'></i>
+                <span class="links_name">Roles</span>
+            </a>
+            <span class="tooltip">Roles</span>
+        </li>
+        <li class="profile-side">
+            <div class="profile-details">
+            <div class="name_job">
+                <div class="name">Uros Kozic</div>
+                <div class="job">Senior Software Engineer</div>
+            </div>
+            </div>
+            <i class='bx bx-log-out' id="log_out" ></i>
+        </li>
+    </ul>
+    </div>
+  <section class="container">
+    <h1>Meetings</h1>
+    <a class="button-create" href="createMeeting.html">Add new meeting</a>
+    <ul class="meet-tab-nav" id="myTab">
+      <li class="nav-item">
+        <button class="meet-link active" id="upcoming-tab">Upcoming</button>
+      </li>
+      <li class="nav-item">
+        <button class="meet-link" id="held-tab">Held</button>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="upcoming-tab-pane">
+        
+        <div class="meetings-page">
+          <div class="meeting-div">
+            <span class="meeting-title">Meeting with client</span>
+            <span class="meeting-organizer">Organizer: Pera Peric</span>
+            <span class="meeting-date">Date: 01/23/2023</span>
+            <span class="meeting-time">Time: 9:30-10:30</span>
+            <div class="meetings-buttons">
+              <a class="update-meeting" href="updateMeeting.html">Update</a>
+              <a class="delete-meeting" href="#" onclick="hideDiv()">Delete</a>
+            </div>
+          </div>
+          <div class="meeting-div">
+            <span class="meeting-title">Meeting with Manager</span>
+            <span class="meeting-organizer">Organizer: Pera Peric</span>
+            <span class="meeting-date">Date: 01/13/2023</span>
+            <span class="meeting-time">Time: 8:30-10:30</span>
+            <div class="meetings-buttons">
+              <a class="update-meeting" href="updateMeeting.html">Update</a>
+              <a class="delete-meeting" href="#" onclick="hideDiv()">Delete</a>
+            </div>
+          </div>
+          <div class="meeting-div">
+            <span class="meeting-title">Meeting with Team Leader</span>
+            <span class="meeting-organizer">Organizer: Pera Peric</span>
+            <span class="meeting-date">Date: 12/22/2022</span>
+            <span class="meeting-time">Time: 9:00-10:00</span>
+            <div class="meetings-buttons">
+              <a class="update-meeting" href="updateMeeting.html">Update</a>
+              <a class="delete-meeting" href="#" onclick="hideDiv()">Delete</a>
+            </div>
+          </div>
+          <div class="meeting-div">
+            <span class="meeting-title">Meeting with client</span>
+            <span class="meeting-organizer">Organizer: Pera Peric</span>
+            <span class="meeting-date">Date: 03/23/2023</span>
+            <span class="meeting-time">Time: 9:30-10:30</span>
+            <div class="meetings-buttons">
+              <a class="update-meeting" href="updateMeeting.html">Update</a>
+              <a class="delete-meeting" href="#" onclick="hideDiv()">Delete</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="held-tab-pane">
+        <div class="meetings">
+          <div class="meeting-div">
+            <span class="meeting-title">Meeting with client</span>
+            <span class="meeting-organizer">Organizer: Pera Peric</span>
+            <span class="meeting-date">Date: 01/23/2023</span>
+            <span class="meeting-time">Time: 9:30-10:30</span>
+            <span class="meeting-missed">Missed</span>
+            <a class="button-create" href="updateAttendance.html">Update Attendance</a>
+          </div>
+          <div class="meeting-div">
+            <span class="meeting-title">Meeting with Manager</span>
+            <span class="meeting-organizer">Organizer: Pera Peric</span>
+            <span class="meeting-date">Date: 01/13/2023</span>
+            <span class="meeting-time">Time: 8:30-10:30</span>
+            <span class="meeting-attended">Attended</span>
+            <a class="button-create" href="updateAttendance.html">Update Attendance</a>
+          </div>
+          <div class="meeting-div">
+            <span class="meeting-title">Meeting with Team Leader</span>
+            <span class="meeting-organizer">Organizer: Pera Peric</span>
+            <span class="meeting-date">Date: 12/22/2022</span>
+            <span class="meeting-time">Time: 9:00-10:00</span>
+            <span class="meeting-attended">Attended</span>
+            <a class="button-create" href="updateAttendance.html">Update Attendance</a>
+          </div>
+          <div class="meeting-div">
+            <span class="meeting-title">Meeting with client</span>
+            <span class="meeting-organizer">Organizer: Pera Peric</span>
+            <span class="meeting-date">Date: 03/23/2023</span>
+            <span class="meeting-time">Time: 9:30-10:30</span>
+            <span class="meeting-missed">Missed</span>
+            <a class="button-create" href="updateAttendance.html">Update Attendance</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let upcomingBtn = document.querySelector("#upcoming-tab");
+  let heldBtn = document.querySelector("#held-tab");
+  let upcomingContent = document.querySelector("#upcoming-tab-pane");
+  let heldContent = document.querySelector("#held-tab-pane");
+
+  let logOutBtn = document.querySelector("#log_out");
+  
+  logOutBtn.addEventListener("click", ()=>{
+    window.location.href = 'login.html';
+  });
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();
+  });
+
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
+   }
+  }
+
+  upcomingBtn.addEventListener("click", ()=>{
+    if(upcomingBtn.classList.contains("active")){
+      return;
+    }
+    heldBtn.classList.remove("active");
+    heldContent.classList.remove("show");
+    heldContent.classList.remove("active");
+    upcomingBtn.classList.add("active");
+    upcomingContent.classList.add("show");
+    upcomingContent.classList.add("active");
+  });
+
+  heldBtn.addEventListener("click", ()=>{
+    if(heldBtn.classList.contains("active")){
+      return;
+    }
+    upcomingBtn.classList.remove("active");
+    upcomingContent.classList.remove("show");
+    upcomingContent.classList.remove("active");
+    heldBtn.classList.add("active");
+    heldContent.classList.add("show");
+    heldContent.classList.add("active");
+  });
+
+  function hideDiv(){
+    event.srcElement.parentNode.parentNode.remove();
+  }
+
+  function updateMeeting(){
+    window.open("updateMeeting.html");
+    //todo izbaci iz liste kad se bude implementiralo
+  }
+  </script>
+</body>
+</html>
